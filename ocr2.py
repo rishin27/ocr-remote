@@ -22,7 +22,7 @@ app = FastAPI()
     ray_actor_options={
         "num_cpus": 2,
         "runtime_env": {
-            "pip": "./req.txt",
+            "pip": ["python-doctr[torch]", "python-doctr[torch]"],
         },
     },
 )

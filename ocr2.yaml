@@ -1,0 +1,32 @@
+# This file was generated using the `serve build` command on Ray v2.0.0.
+
+import_path: ocr2:ocr
+
+runtime_env:
+  working_dir: https://github.com/rishin27/ocr-remote/archive/refs/heads/main.zip
+
+
+deployments:
+
+- name: RawOCR
+  num_replicas: 2
+  route_prefix: /ocr
+  max_concurrent_queries: 100
+  user_config: null
+  autoscaling_config: null
+  graceful_shutdown_wait_loop_s: 2.0
+  graceful_shutdown_timeout_s: 20.0
+  health_check_period_s: 10.0
+  health_check_timeout_s: 30.0
+  ray_actor_options:
+    runtime_env:
+      pip:
+      - python-doctr[torch]
+      - python-doctr[torch]
+    num_cpus: 2.0
+    num_gpus: null
+    memory: null
+    object_store_memory: null
+    resources: {}
+    accelerator_type: null
+
