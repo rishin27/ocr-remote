@@ -18,6 +18,7 @@ deployments:
   health_check_timeout_s: 30.0
   ray_actor_options:
     runtime_env:
+      working_dir: https://github.com/rishin27/ocr-remote/archive/refs/heads/main.zip
       pip: req.txt
     num_cpus: 2.0
     num_gpus: null
