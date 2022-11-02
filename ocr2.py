@@ -15,14 +15,14 @@ app = FastAPI()
 #             pip = "req.txt",
 # )
 
+
 @serve.deployment(
     route_prefix="/ocr",
     num_replicas=2,
     ray_actor_options={
         "num_cpus": 2,
         "runtime_env": {
-            "working_dir": "https://github.com/rishin27/ocr-remote/archive/refs/heads/main.zip",
-            "pip": "req.txt",
+            "pip": "./req.txt",
         },
     },
 )
