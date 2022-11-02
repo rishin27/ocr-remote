@@ -1,6 +1,6 @@
 # This file was generated using the `serve build` command on Ray v2.0.0.
 
-import_path: ocr_2:ocr
+import_path: ocr:ocr
 
 runtime_env: {}
 
